@@ -457,7 +457,7 @@ if (!ddg_444dgdgds4____) {
 $(document).on("click", ".username", e => {
     insertText(e.target.innerHTML, !0)
 })
-}
+
 window.formatChatMessage = (function(oldFormatChatMessage) {
     return function(data, last) {
         const div = oldFormatChatMessage(data, last);
