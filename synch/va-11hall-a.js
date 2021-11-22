@@ -441,8 +441,9 @@ if (!ddg_444dgdgds4____) {
     $('#playlistrow').prepend('<div id="smiles-panel"></div>');
     $('#smiles-panel').hide();
     for (var smiles = CHANNEL.emotes, n = 0, smilesLen = smiles.length; smilesLen > n; n++) {
-        $("<div class=\"emote\"><img src="+ smiles[n].image +" class=\"channel-emote\" title=\"" + smiles[n].name + "\" onclick=\"insertText(' " + smiles[n].name + " ')\"></div>")
-            .appendTo('#smiles-panel')
+        $(`<div class="emote">
+            <img src="${smiles[n].image}" class="channel-emote" title="${smiles[n].name}" onclick="insertText('${smiles[n].name}')">
+          </div>`).appendTo('#smiles-panel');
     }
     var insertText = function(str, bool) {
         let formated_str = bool ? str + $("#chatline").val() : $("#chatline").val() + str;
